@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+:root {
+  --blasticdarkpurple: #100020;
+  --blasticlightpurple: #200040;
+  --blasticdarklime: #408040;
+  --blasticlightlime: #80ff80;
+  --blasticdarkcyan: #408080;
+  --blasticlightcyan: #80ffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--blasticlightlime);
+}
+
+header {
+  width: 100%;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: var(--blasticlightpurple);
+
+  h1 {
+    font-size: 5em;
+  }
+}
+
+main {
+  overflow: hidden;
+  background-color: var(--blasticdarkpurple);
+  width: 100%;
+
+  h1 {
+    font-size: 3em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: var(--blasticlightlime);
+    color: var(--blasticdarkpurple);
+  }
+}
+
+footer {
+  width: 100%;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  text-align: center;
+  background-color: var(--blasticlightpurple);
+  color: var(--blasticdarkcyan);
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--blasticlightcyan);
+}
