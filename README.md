@@ -1,2 +1,2 @@
 # My Website :)
-[Link](cole-man-blastic.github.io)
+[Link](https://cole-man-blastic.github.io)
