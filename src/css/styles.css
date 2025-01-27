@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+:root {
+  --blasticdarkpurple: #100020;
+  --blasticlightpurple: #200040;
+  --blasticdarklime: #408040;
+  --blasticlightlime: #80ff80;
+  --blasticdarkcyan: #408080;
+  --blasticlightcyan: #80ffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-family: "Concert One", sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  color: var(--blasticlightlime);
+  background-color: var(--blasticdarkpurple);
+}
+
+header>a {
+  display: block;
+  float: left;
+  color: var(--blasticlightlime);
+}
+
+header>a>img {
+  float: left;
+  width: 3rem;
+  height: 3rem;
+}
+
+header>a>div {
+  float: left;
+  font-size: 1.5rem;
+  margin-top: 0.6rem;
+}
+
+header>ul {
+  float: right;
+}
+
+header>ul>li {
+  display: block;
+  float: left;
+}
+
+header>ul>li>a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--blasticlightlime);
+  background-color: var(--blasticdarklime);
+  border-bottom-style: solid;
+  border-width: 0.125rem;
+  border-color: var(--blasticlightlime);
+}
+
+header>ul>li>a.home {
+  border-left-style: solid;
+  border-bottom-left-radius: 1rem;
+}
+
+header>ul>li>a.active {
+  color: var(--blasticdarklime);
+  background-color: var(--blasticlightlime);
+}
+
+header>ul>li>a:hover:not(.active) {
+  color: var(--blasticlightcyan);
+  background-color: var(--blasticdarkcyan);
+}
+
+header>div {
+  display: flex;
+  float: left;
+  clear: both;
+  margin: 1rem;
+  padding: 1rem;
+  color: var(--blasticlightcyan);
+  background-color: var(--blasticdarkcyan);
+  border-radius: 1rem;
+}
+
+header>div>div {
+  padding: 0.25rem;
+}
+
+header>div>button {
+  margin-left: 1rem;
+  padding: 0.25rem;
+  padding-right: 0.3rem;
+  line-height: 1rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: var(--blasticlightcyan);
+  background-color: transparent;
+  border-style: none;
+  border-radius: 0.25rem;
+}
+
+header>div>button:hover {
+  color: var(--blasticdarkcyan);
+  background-color: var(--blasticlightcyan);
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+  color: var(--blasticdarkpurple);
+  background-color: var(--blasticlightpurple);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  text-align: center;
+  color: var(--blasticlightcyan);
+  margin: 1em;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  width: 37.5%;
+  color: var(--blasticdarkpurple);
+  background-color: var(--blasticlightlime);
+  border-radius: 1rem;
+}
+
+canvas {
+  display: block;
+  margin: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(min(75%, 48rem));
+  background-color: black;
+}
+
+#top-project {
+  display: block;
+  margin: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  width: 50%;
+  text-decoration: none;
+  color: var(--blasticdarkpurple);
+  background-color: var(--blasticlightcyan);
+  border-radius: 1rem;
+}
+
+#top-project>img {
+  width: 100%;
+}
+
+@media screen and (max-width: 40rem) {
+  header>a {
+    display: none;
+  }
+
+  header>ul {
+    float: none;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  header>ul>li {
+    width: 100%;
+  }
+
+  header>ul>li>a {
+    font-size: calc(min(1rem, 5vw));
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  header>ul>li>a.home {
+    border-left-style: none;
+    border-bottom-left-radius: 0;
+  }
+
+  p {
+    width: 75%;
+  }
+
+  #top-project {
+    width: 87.5%;
+  }
+}
