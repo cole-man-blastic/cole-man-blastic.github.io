@@ -114,6 +114,10 @@ header>div>button:hover {
 }
 
 footer {
+  margin-top: auto;
+}
+
+footer>p {
   margin-top: 2rem;
   padding: 1rem;
   text-align: center;
