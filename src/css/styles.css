@@ -91,24 +91,28 @@ header>div {
   border-radius: 1rem;
 }
 
-header>div>div {
-  padding: 0.25rem;
+header>div:has(input[type="checkbox"]:checked) {
+  display: none;
 }
 
-header>div>button {
+header>div>input[type="checkbox"] {
+  display: none;
+}
+
+header>div>label {
   margin-left: 1rem;
-  padding: 0.25rem;
-  padding-right: 0.3rem;
-  line-height: 1rem;
+  margin-top: 0.1rem;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  line-height: 1;
   font-size: 1rem;
-  font-weight: bolder;
   color: var(--blasticlightcyan);
   background-color: transparent;
   border-style: none;
   border-radius: 0.25rem;
 }
 
-header>div>button:hover {
+header>div>label:hover {
   color: var(--blasticdarkcyan);
   background-color: var(--blasticlightcyan);
 }
@@ -166,7 +170,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
-  width: 37.5%;
+  width: min(87.5%, 30rem);
   color: var(--blasticdarkpurple);
   background-color: var(--blasticlightlime);
   border-radius: 1rem;
@@ -224,13 +228,5 @@ canvas {
   header>ul>li>a.home {
     border-left-style: none;
     border-bottom-left-radius: 0;
-  }
-
-  p {
-    width: 75%;
-  }
-
-  #top-project {
-    width: 87.5%;
   }
 }
