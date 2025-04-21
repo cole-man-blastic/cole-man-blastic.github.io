@@ -170,7 +170,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
-  width: min(87.5%, 30rem);
+  width: min(75%, 30rem);
   color: var(--blasticdarkpurple);
   background-color: var(--blasticlightlime);
   border-radius: 1rem;
@@ -181,7 +181,7 @@ canvas {
   margin: 1rem;
   margin-left: auto;
   margin-right: auto;
-  width: calc(min(75%, 48rem));
+  width: min(87.5%, 35rem);
   background-color: black;
 }
 
@@ -191,7 +191,7 @@ canvas {
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
-  width: 50%;
+  width: min(87.5%, 35rem);
   text-decoration: none;
   color: var(--blasticdarkpurple);
   background-color: var(--blasticlightcyan);
