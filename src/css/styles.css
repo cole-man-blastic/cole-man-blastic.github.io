@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
 :root {
-  --blasticdarkpurple: #100020;
-  --blasticlightpurple: #200040;
-  --blasticdarklime: #408040;
-  --blasticlightlime: #80ff80;
-  --blasticdarkcyan: #408080;
-  --blasticlightcyan: #80ffff;
+  --blastic-dark-purple: #100020;
+  --blastic-light-purple: #200040;
+  --blastic-dark-lime: #408040;
+  --blastic-light-lime: #80ff80;
+  --blastic-dark-cyan: #408080;
+  --blastic-light-cyan: #80ffff;
 }
 
 * {
@@ -23,14 +23,14 @@ body {
   font-family: "Concert One", sans-serif;
   font-style: normal;
   text-decoration: none;
-  color: var(--blasticlightlime);
-  background-color: var(--blasticdarkpurple);
+  color: var(--blastic-light-lime);
+  background-color: var(--blastic-dark-purple);
 }
 
 header>a {
   display: block;
   float: left;
-  color: var(--blasticlightlime);
+  color: var(--blastic-light-lime);
 }
 
 header>a>img {
@@ -58,11 +58,11 @@ header>ul>li>a {
   display: block;
   padding: 1rem;
   text-decoration: none;
-  color: var(--blasticlightlime);
-  background-color: var(--blasticdarklime);
+  color: var(--blastic-light-lime);
+  background-color: var(--blastic-dark-lime);
   border-bottom-style: solid;
   border-width: 0.125rem;
-  border-color: var(--blasticlightlime);
+  border-color: var(--blastic-light-lime);
 }
 
 header>ul>li>a.home {
@@ -71,13 +71,13 @@ header>ul>li>a.home {
 }
 
 header>ul>li>a.active {
-  color: var(--blasticdarklime);
-  background-color: var(--blasticlightlime);
+  color: var(--blastic-dark-lime);
+  background-color: var(--blastic-light-lime);
 }
 
 header>ul>li>a:hover:not(.active) {
-  color: var(--blasticlightcyan);
-  background-color: var(--blasticdarkcyan);
+  color: var(--blastic-light-cyan);
+  background-color: var(--blastic-dark-cyan);
 }
 
 header>div {
@@ -86,8 +86,8 @@ header>div {
   clear: both;
   margin: 1rem;
   padding: 1rem;
-  color: var(--blasticlightcyan);
-  background-color: var(--blasticdarkcyan);
+  color: var(--blastic-light-cyan);
+  background-color: var(--blastic-dark-cyan);
   border-radius: 1rem;
 }
 
@@ -106,15 +106,15 @@ header>div>label {
   padding-right: 0.1rem;
   line-height: 1;
   font-size: 1rem;
-  color: var(--blasticlightcyan);
+  color: var(--blastic-light-cyan);
   background-color: transparent;
   border-style: none;
   border-radius: 0.25rem;
 }
 
 header>div>label:hover {
-  color: var(--blasticdarkcyan);
-  background-color: var(--blasticlightcyan);
+  color: var(--blastic-dark-cyan);
+  background-color: var(--blastic-light-cyan);
 }
 
 footer {
@@ -125,19 +125,14 @@ footer>div {
   margin-top: 2rem;
   padding: 1rem;
   text-align: center;
-  color: var(--blasticdarkpurple);
-  background-color: var(--blasticlightpurple);
+  color: var(--blastic-dark-purple);
+  background-color: var(--blastic-light-purple);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   text-align: center;
-  color: var(--blasticlightcyan);
+  color: var(--blastic-light-cyan);
   margin: 1em;
 }
 
@@ -171,8 +166,8 @@ p {
   margin-right: auto;
   padding: 1rem;
   width: min(62.5%, 40rem);
-  color: var(--blasticdarkpurple);
-  background-color: var(--blasticlightlime);
+  color: var(--blastic-dark-purple);
+  background-color: var(--blastic-light-lime);
   border-radius: 1rem;
 }
 
@@ -193,8 +188,8 @@ canvas {
   padding: 1rem;
   width: min(87.5%, 56rem);
   text-decoration: none;
-  color: var(--blasticdarkpurple);
-  background-color: var(--blasticlightcyan);
+  color: var(--blastic-dark-purple);
+  background-color: var(--blastic-light-cyan);
   border-radius: 1rem;
 }
 
