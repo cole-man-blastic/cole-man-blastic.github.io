@@ -180,7 +180,7 @@ canvas {
   background-color: black;
 }
 
-#top-project {
+#project-feature {
   display: block;
   margin: 1rem;
   margin-left: auto;
@@ -193,7 +193,7 @@ canvas {
   border-radius: 1rem;
 }
 
-#top-project>img {
+#project-feature>img {
   width: 100%;
 }
 
