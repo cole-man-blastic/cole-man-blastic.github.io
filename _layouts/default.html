@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="{{ site.description }}">
+</head>
+
+<body>
+  <header>
+    <a href="">
+      <img src="/assets/images/ProfilePictureTransparentZoom.png">
+      <div>{{ site.title }}</div>
+    </a>
+    <ul>
+      <li><a href="/" class="home {% if page.nav == 'home' %}active{% endif %}">Home</a></li>
+      <li><a href="/projects" class="{% if page.nav == 'projects' %}active{% endif %}">Projects</a></li>
+      <li><a href="/about" class="{% if page.nav == 'about' %}active{% endif %}">About</a></li>
+      <li><a href="/blog" class="{% if page.nav == 'blog' %}active{% endif %}">Blog</a></li>
+      <li><a href="/secrets" class="{% if page.nav == 'secrets' %}active{% endif %}">Secrets</a></li>
+    </ul>
+    <div>
+      This site is still under construction!<input id="close-banner" type="checkbox"><label for="close-banner">&#x2715</label>
+    </div>
+  </header>
+  <main>{{ content }}</main>
+  <footer>
+    <div>I never understood the purpose of footers.</div>
+  </footer>
+</body>
+
+</html>
