@@ -14,7 +14,9 @@ nav: blog
   <h2>Recent Posts</h2>
   <div class="blob">
     <ul>
-      
+      {% for article in site.articles %}
+        <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+      {% endfor %}
     </ul>
   </div>
 </hgroup>

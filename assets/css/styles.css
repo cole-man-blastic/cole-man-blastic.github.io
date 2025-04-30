@@ -118,9 +118,20 @@ ul.nav-bar>li>.tab:hover:not(.active) {
 }
 
 main {
-  width: 62.5%;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-grow: 1;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.content {
+  flex: 1 0 0;
+}
+
+.sidebar {
+  width: 12rem;
+  max-width: 12.5%;
+  background-color: var(--blastic-light-purple);
 }
 
 footer {
@@ -135,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   text-align: center;
   color: var(--blastic-light-cyan);
-  margin: 1em;
+  margin: 1em 0;
 }
 
 h1 {
@@ -163,8 +174,7 @@ h6 {
 }
 
 p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
 
 li {
@@ -173,9 +183,9 @@ li {
 
 .blob {
   padding: 1rem;
-  width: min(75%, 48rem);
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  max-width: 48rem;
+  margin: 1rem auto;
   color: var(--blastic-dark-purple);
   background-color: var(--blastic-light-lime);
   border-radius: 1rem;
@@ -196,9 +206,7 @@ canvas {
 
 .project-feature {
   display: block;
-  margin: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1rem auto;
   padding: 1rem;
   width: min(100%, 64rem);
   text-decoration: none;
@@ -217,7 +225,6 @@ canvas {
   }
 
   ul.nav-bar {
-    float: none;
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -237,5 +244,9 @@ canvas {
   ul.nav-bar>li>.home {
     border-left-style: none;
     border-bottom-left-radius: 0;
+  }
+
+  main {
+    padding: 1rem 0;
   }
 }

@@ -12,7 +12,7 @@
 
 <body>
   <header>
-    <a class="home-link" href="">
+    <a class="home-link" href="/">
       <img class="icon" src="/assets/images/ProfilePictureTransparentZoom.png">
       <div class="title">{{ site.title }}</div>
     </a>
@@ -27,7 +27,13 @@
       This site is still under construction!<input class="close" id="close-banner" type="checkbox"><label class="x" for="close-banner">&#x2715</label>
     </div>
   </header>
-  <main>{{ content }}</main>
+  <main>
+    <div class="sidebar"><p>Nothing here yet, sorry!</p></div>
+    <div class="content">
+      {{ content }}
+    </div>
+    <div class="sidebar"><p>Nothing here yet, sorry!</p></div>
+  </main>
   <footer>I never understood the purpose of footers.</footer>
 </body>
 
