@@ -13,33 +13,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-wrap: break-word;
+  font-weight: 400;
+  font-family: "Concert One", sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  color: var(--blastic-light-lime);
 }
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-weight: 400;
-  font-family: "Concert One", sans-serif;
-  font-style: normal;
-  text-decoration: none;
-  color: var(--blastic-light-lime);
   background-color: var(--blastic-dark-purple);
+  overflow-x: hidden;
 }
 
 .home-link {
   display: block;
   float: left;
-  color: var(--blastic-light-lime);
 }
 
-.home-link>.icon {
+.home-link>img {
   float: left;
   width: 3rem;
   height: 3rem;
 }
 
-.home-link>.title {
+.home-link>div {
   float: left;
   font-size: 1.5rem;
   margin-top: 0.6rem;
@@ -54,28 +55,26 @@ ul.nav-bar>li {
   float: left;
 }
 
-ul.nav-bar>li>.tab {
+ul.nav-bar>li>a {
   display: block;
   padding: 1rem;
-  text-decoration: none;
-  color: var(--blastic-light-lime);
   background-color: var(--blastic-dark-lime);
   border-bottom-style: solid;
   border-width: 0.125rem;
   border-color: var(--blastic-light-lime);
 }
 
-ul.nav-bar>li>.home {
+ul.nav-bar>li>a.home {
   border-left-style: solid;
   border-bottom-left-radius: 1rem;
 }
 
-ul.nav-bar>li>.tab.active {
+ul.nav-bar>li>a.active {
   color: var(--blastic-dark-lime);
   background-color: var(--blastic-light-lime);
 }
 
-ul.nav-bar>li>.tab:hover:not(.active) {
+ul.nav-bar>li>a:hover:not(.active) {
   color: var(--blastic-light-cyan);
   background-color: var(--blastic-dark-cyan);
 }
@@ -91,15 +90,15 @@ ul.nav-bar>li>.tab:hover:not(.active) {
   border-radius: 1rem;
 }
 
-.banner:has(input[type="checkbox"]:checked.close) {
+.banner>input[type="checkbox"] {
   display: none;
 }
 
-.banner>input[type="checkbox"].close {
+.banner:has(input[type="checkbox"]:checked) {
   display: none;
 }
 
-.banner label.x {
+.banner>label {
   margin-left: 1rem;
   margin-top: 0.1rem;
   padding-left: 0.1rem;
@@ -112,7 +111,7 @@ ul.nav-bar>li>.tab:hover:not(.active) {
   border-radius: 0.25rem;
 }
 
-.banner>label.x:hover {
+.banner>label:hover {
   color: var(--blastic-dark-cyan);
   background-color: var(--blastic-light-cyan);
 }
@@ -126,12 +125,14 @@ main {
 
 .content {
   flex: 1 0 0;
+  overflow-x: hidden;
 }
 
 .sidebar {
   width: 12rem;
   max-width: 12.5%;
-  background-color: var(--blastic-light-purple);
+  border: 0.125rem dashed var(--blastic-light-purple);
+  overflow-x: hidden;
 }
 
 footer {
@@ -191,17 +192,12 @@ li {
   border-radius: 1rem;
 }
 
-.blob a {
+.blob * {
   color: var(--blastic-dark-purple);
 }
 
-canvas {
-  display: block;
-  margin: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: min(100%, 64rem);
-  background-color: black;
+main a {
+  text-decoration: underline;
 }
 
 .project-feature {
@@ -215,7 +211,7 @@ canvas {
   border-radius: 1rem;
 }
 
-.project-feature>.thumbnail {
+.project-feature>img {
   width: 100%;
 }
 
@@ -226,7 +222,6 @@ canvas {
 
   ul.nav-bar {
     display: flex;
-    flex-wrap: nowrap;
     width: 100%;
   }
 
@@ -234,19 +229,15 @@ canvas {
     width: 100%;
   }
 
-  ul.nav-bar>li>.tab {
+  ul.nav-bar>li>a {
     font-size: calc(min(1rem, 5vw));
     padding-left: 0;
     padding-right: 0;
     text-align: center;
   }
 
-  ul.nav-bar>li>.home {
+  ul.nav-bar>li>a.home {
     border-left-style: none;
     border-bottom-left-radius: 0;
-  }
-
-  main {
-    padding: 1rem 0;
   }
 }

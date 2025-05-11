@@ -3,6 +3,7 @@ layout: default
 ---
 
 <article>
-  Written by {{ page.author }} on {{ page.date | date: "%B %-d, %Y" }}
-  {{ content }}
+  <h1>{{ page.title }}</h1>
+  <caption>Written by {{ page.author }} on {{ page.date | date: "%B %-d, %Y" }}</caption>
+  <p>{{ content }}</p>
 </article>
