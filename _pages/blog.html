@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog
+nav: blog
+---
+{% assign articles = site.pages | where_exp: "page", "page.path contains 'blog/posts/'" %}
+{% assign sorted_articles = articles | sort: "date" | reverse %}
+{% assign latest_article = sorted_articles.first %}
+
+<hgroup>
+  <h1>Blog</h1>
+  <div class="blob">
+    Check out my most recent post:<br><br>
+    <a href="{{ latest_article.url }}">{{ latest_article.title }}</a>
+    <caption>Written by {{ latest_article.author }} on {{ latest_article.date | date: "%B %-d, %Y" }}</caption>
+    {{ latest_article.excerpt }}
+  </div>
+</hgroup>
+<hgroup>
+  <h2>Recent Posts</h2>
+  <div class="blob">
+    <ul>
+      {% for article in sorted_articles %}
+        <li><a href="{{ article.url }}">{{ article.title }} - {{ article.date | date: "%B %-d, %Y" }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</hgroup>

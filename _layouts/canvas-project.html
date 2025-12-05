@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<hgroup>
+  <h1>{{ page.title }}</h1>
+  <div class="project-canvas-group">
+    <div class="project-canvas-wrapper">
+      <canvas class="project-canvas" width="1920" height="1080"></canvas>
+    </div>
+    <button class="fullscreen-button">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M8 3H5a2 2 0 0 0-2 2v3"/>
+        <path d="M16 3h3a2 2 0 0 1 2 2v3"/>
+        <path d="M16 21h3a2 2 0 0 0 2-2v-3"/>
+        <path d="M8 21H5a2 2 0 0 1-2-2v-3"/>
+      </svg>
+    </button>
+  </div>
+</hgroup>
+
+<script type="module" src="/assets/js/canvas-project.mjs"></script>

@@ -10,10 +10,23 @@
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  overflow-wrap: break-word;
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  text-decoration: inherit;
+  text-transform: inherit;
+  vertical-align: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+html {
   font-weight: 400;
   font-family: "Concert One", sans-serif;
   font-style: normal;
@@ -83,7 +96,8 @@ ul.nav-bar>li>a:hover:not(.active) {
   display: flex;
   float: left;
   clear: both;
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
   padding: 1rem;
   color: var(--blastic-light-cyan);
   background-color: var(--blastic-dark-cyan);
@@ -101,12 +115,12 @@ ul.nav-bar>li>a:hover:not(.active) {
 .banner>label {
   margin-left: 1rem;
   margin-top: 0.1rem;
-  padding-left: 0.1rem;
-  padding-right: 0.1rem;
   line-height: 1;
-  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  text-align: center;
   color: var(--blastic-light-cyan);
-  background-color: transparent;
   border-style: none;
   border-radius: 0.25rem;
 }
@@ -118,21 +132,24 @@ ul.nav-bar>li>a:hover:not(.active) {
 
 main {
   display: flex;
+  justify-content: center;
   flex-grow: 1;
   padding: 1rem;
   gap: 1rem;
 }
 
 .content {
+  margin: 0 auto;
   flex: 1 0 0;
-  overflow-x: hidden;
+  max-width: 64rem;
+  overflow-wrap: break-word;
 }
 
 .sidebar {
   width: 12rem;
   max-width: 12.5%;
+  overflow-wrap: break-word;
   border: 0.125rem dashed var(--blastic-light-purple);
-  overflow-x: hidden;
 }
 
 footer {
@@ -184,8 +201,7 @@ li {
 
 .blob {
   padding: 1rem;
-  width: 100%;
-  max-width: 48rem;
+  width: min(100%, 48rem);
   margin: 1rem auto;
   color: var(--blastic-dark-purple);
   background-color: var(--blastic-light-lime);
@@ -196,6 +212,11 @@ li {
   color: var(--blastic-dark-purple);
 }
 
+.blob p {
+  color: var(--blastic-dark-lime);
+  font-size: 0.75rem;
+}
+
 main a {
   text-decoration: underline;
 }
@@ -204,7 +225,6 @@ main a {
   display: block;
   margin: 1rem auto;
   padding: 1rem;
-  width: min(100%, 64rem);
   text-decoration: none;
   color: var(--blastic-dark-purple);
   background-color: var(--blastic-light-cyan);
@@ -213,6 +233,43 @@ main a {
 
 .project-feature>img {
   width: 100%;
+}
+
+.project-canvas-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-canvas-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  outline: 0.125rem solid var(--blastic-light-purple);
+  outline-style: dashed;
+}
+
+canvas.project-canvas {
+  display: block;
+  width: 100%;
+  background-color: var(--blastic-dark-purple);
+}
+
+button.fullscreen-button {
+  display: block;
+  margin-left: auto;
+  padding: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--blastic-dark-cyan);
+  color: var(--blastic-light-cyan);
+}
+
+button.fullscreen-button:hover {
+  background-color: var(--blastic-light-cyan);
+  color: var(--blastic-dark-cyan);
 }
 
 @media screen and (max-width: 40rem) {
@@ -239,5 +296,9 @@ main a {
   ul.nav-bar>li>a.home {
     border-left-style: none;
     border-bottom-left-radius: 0;
+  }
+
+  .sidebar {
+    display: none;
   }
 }

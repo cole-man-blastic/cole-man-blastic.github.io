@@ -3,6 +3,9 @@ description: This is my website where I put all of my cool web projects. I guess
 url: https://cole-man-blastic.github.io
 
 collections:
-  articles:
+  pages:
     output: true
-    permalink: /blog/posts/:name
+    permalink: /:path
+  canvas-projects:
+    output: true
+    permalink: projects/:path
