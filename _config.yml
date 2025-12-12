@@ -9,3 +9,19 @@ collections:
   canvas-projects:
     output: true
     permalink: /projects/:path
+
+defaults:
+  - scope:
+      path: ""
+      type: "canvas-projects"
+    values:
+      layout: "canvas-project"
+      permalink: "/projects/:name"
+      nav: "projects"
+
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "article"
+      nav: "blog"
