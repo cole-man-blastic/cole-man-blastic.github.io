@@ -18,7 +18,7 @@ nav: projects
   <div class="blob">
     <ul>
       {% for project in site.canvas-projects %}
-        <li><a href="{{ project.url | split: '/' | last | split: '.' | first }}">{{ project.title }}</a></li>
+        <li><a href="{{ project.url }}">{{ project.title }}</a></li>
       {% endfor %}
     </ul>
   </div>
