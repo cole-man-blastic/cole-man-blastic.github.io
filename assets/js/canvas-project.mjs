@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let path = window.location.pathname.slice(0, -1);
+  let path = window.location.pathname;
   const lastDotIndex = path.lastIndexOf('.');
   const lastSlashIndex = path.lastIndexOf('/');
 
