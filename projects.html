@@ -4,8 +4,6 @@ title: Projects
 nav: projects
 ---
 
-{% assign projects = site.pages | where_exp: "page", "page.path contains 'projects/'" %}
-
 <hgroup>
   <h1>Projects</h1>
   <p class="blob">Check out the stuff I made!</p>
@@ -19,8 +17,8 @@ nav: projects
 <h2>Canvas Projects</h2>
   <div class="blob">
     <ul>
-      {% for project in projects %}
-        <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+      {% for project in site.canvas-projects %}
+        <li><a href="{{ project.url | split: '/' | last | split: '.' | first }}">{{ project.title }}</a></li>
       {% endfor %}
     </ul>
   </div>

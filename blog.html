@@ -3,8 +3,7 @@ layout: default
 title: Blog
 nav: blog
 ---
-{% assign articles = site.pages | where_exp: "page", "page.path contains 'blog/posts/'" %}
-{% assign sorted_articles = articles | sort: "date" | reverse %}
+{% assign sorted_articles = site.articles | sort: "date" | reverse %}
 {% assign latest_article = sorted_articles.first %}
 
 <hgroup>

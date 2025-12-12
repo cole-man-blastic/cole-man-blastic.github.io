@@ -1,7 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const fullPath = window.location.pathname;
-  const directoryPath = fullPath.substring(0, fullPath.lastIndexOf('/') + 1);
-  import(`${directoryPath}js/main.mjs`);
+  let path = window.location.pathname.slice(0, -1);
+  const lastDotIndex = path.lastIndexOf('.');
+  const lastSlashIndex = path.lastIndexOf('/');
+
+  if (lastDotIndex !== -1 && lastDotIndex > lastSlashIndex) {
+    path = path.substring(0, lastDotIndex);
+  }
+  import(`${path}/js/main.mjs`);
+
   const canvasWrapper = document.querySelector(".project-canvas-wrapper");
   const fullscreenButton = document.querySelector("button.fullscreen-button");
   fullscreenButton.onclick = () => canvasWrapper.requestFullscreen();
