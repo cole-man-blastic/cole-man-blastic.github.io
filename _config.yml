@@ -12,16 +12,16 @@ collections:
 
 defaults:
   - scope:
-      path: ""
-      type: "canvas-projects"
+      path: _canvas-projects
+      type: canvas-projects
     values:
-      layout: "canvas-project"
-      permalink: "/projects/:name"
-      nav: "projects"
+      layout: canvas-project
+      permalink: /projects/:name
+      nav: projects
 
   - scope:
-      path: ""
-      type: "articles"
+      path: _articles
+      type: articles
     values:
-      layout: "article"
-      nav: "blog"
+      layout: article
+      nav: blog
